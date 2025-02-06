@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Parkinsons disease prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/likess.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style1.css') }}">
+<!-- <link href="style.css" rel="stylesheet" type='text/css' > -->
+
+</head>
+<body class="bg-success" >
+ <div class="login">
+    <div class="heading-h1">
+        <font size="6">
+        <h1>Parkinsons Disease Detection</h1>
+    </div>
+    <div class="result">
+        <font size="7"> 
+	    <p><b>{{ prediction_text }}</b></p>
+    </div>
+
+    <!-- Main Input For Receiving Query to our ML -->
+    <form method="POST" action="{{ url_for('predict')}}">
+        
+        <input type="text" id="mdvp_fo" name="MDVP:Fo(Hz)" placeholder="MDVP:Fo(Hz) value" required="required" />    
+        <input type="text" id="mdvp_fhi" name="MDVP:Fhi(Hz)" placeholder="MDVP:Fhi(Hz) value" required="required" />   
+        <input type="text" id="mdvp_flo" name="MDVP:Flo(Hz)" placeholder="MDVP:Flo(Hz) value" required="required" /> 
+        <input type="text" id="mdvp_jitter" name="MDVP:Jitter(%)" placeholder="MDVP:Jitter(%) value" required="required" />
+        <input type="text" id="mdvp_shimmer" name="MDVP:Shimmer" placeholder="MDVP:Shimmer value" required="required" />
+        <input type="text" id="nhr" name="NHR" placeholder="NHR value" required="required" />  
+        <input type="text" id="rpde" name="RPDE" placeholder="RPDE value" required="required" />
+        <input type="text" id="dfa" name="DFA" placeholder="DFA value" required="required" />
+        <input type="text" id="spread1" name="spread1" placeholder="spread1 value" required="required" />
+        <input type="text" id="spread2" name="spread2" placeholder="spread2 value" required="required" />
+        <input type="text" id="d2" name="D2" placeholder="D2 value" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-success btn-large">Diagnose</button>
+    </form>
+    
+    <form action="/submit_comment" method="post">
+        <textarea name="comment" placeholder="add your comment!" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Submit comment" href="admindashboard.html">
+    </form>
+    
+    <ul>
+        <li><b>MDVP:Fo(Hz)</b> - Average vocal fundamental frequency</li>
+        <li><b>MDVP:Fhi(Hz)</b> - Maximum vocal fundamental frequency</li>
+        <li><b>MDVP:Flo(Hz)</b> - Minimum vocal fundamental frequency</li>
+        <li><b>MDVP:Jitter(%)</b> - Several measures of variation in fundamental frequency</li>
+        <li><b>MDVP:Shimmer</b> - Several measures of variation in amplitude</li>
+        <li><b>NHR</b> - Two measures of ratio of noise to tonal components in the voice</li>
+        <li><b>RPDE, D2</b> - Two nonlinear dynamical complexity measures</li>
+        <li><b>DFA</b> - Signal fractal scaling exponent</li>
+        <li><b>spread1, spread2</b> - Three nonlinear measures of fundamental frequency variation</li>
+            </ul>
+    
+ </div>
+ <div class="like-container">
+    <button id="like_button" class="icon like" onclick="toggleLike()"></button>
+    <button id="dislike_button" class="icon dislike" onclick="toggleDislike()"></button>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/likes.js') }}"></script>
+
+</body>
+</html>

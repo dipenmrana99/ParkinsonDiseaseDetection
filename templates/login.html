@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="{{ url_for('static', filename='css/background_video.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!-- The sidebar -->
+<div class="sidebar">
+    <a class="active" href="/login">Login/Register</a>
+    <a href="/adminlogin">Admin login</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="/register">Register</a></p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        // Function to increment visit count
+        function incrementVisitCount() {
+            $.ajax({
+                type: "POST",
+                url: "/track_visit",
+                success: function(response) {
+                    console.log("Visit count updated successfully.");
+                },
+                error: function(error) {
+                    console.error("Error updating visit count:", error);
+                }
+            });
+        }
+    
+        // Call the function when the tracking page is loaded
+        incrementVisitCount();
+    });
+    </script>
+</body>
+</html>

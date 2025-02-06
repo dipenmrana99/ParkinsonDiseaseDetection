@@ -1,0 +1,57 @@
+.like-container {
+    position: fixed;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.icon {
+    width: 110px !important;
+    height: 50px !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border-radius: 10%; /* Make the icon circular */
+}
+
+.icon:hover {
+    transform: scale(1.1); /* Increase size by 10% on hover */
+}
+
+.icon.clicked {
+    transform: rotate(45deg); /* Rotate by 45 degrees when clicked */
+}
+
+.like {
+    background-image: url('like.png'); /* Replace 'like.jpg' with your like icon */
+}
+
+.like.liked {
+    background-image: url('liked.jpeg'); /* Replace 'liked.jpeg' with your liked icon */
+}
+
+.dislike {
+    background-image: url('dislike.png'); /* Replace 'dislike.png' with your dislike icon */
+}
+
+.dislike.disliked {
+    background-image: url('disliked.png'); /* Replace 'disliked.png' with your disliked icon */
+}
+
+.animated {
+    animation: pulse 0.5s ease-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
