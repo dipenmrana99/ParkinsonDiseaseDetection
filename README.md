@@ -46,4 +46,14 @@ Explain why RF may overfit vs simpler models.
 ## 📂 Dataset
 - Source: [UCI Machine Learning Repository – Parkinson’s dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/parkinsons.data)
 - Description: 23 voice measurements from 197 instances
+```
+
+#### ScreenShots:
+---
+User Dashboard
+![user_dashboard](https://github.com/user-attachments/assets/ac3bc1d2-1dfb-43cb-86c7-1eec50c8cedd)
+
+Admin Dashboard
+![admin_dashboard](https://github.com/user-attachments/assets/5c75dab6-874f-4e54-b78f-2416d402310b)
+
 
