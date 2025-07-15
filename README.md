@@ -2,8 +2,7 @@
 ###### <p align='center'>*Transforming Diagnosis, Empowring Life with Precision*
 
 <p align = 'center'><img alt="Static Badge" src="https://img.shields.io/badge/90%25-Python-blue"> <img alt="Static Badge" src="https://img.shields.io/badge/language-12-blue">
-(https://img.shields.io/github/license/dipenmrana99/ParkinsonDiseaseDetection)
-(https://img.shields.io/github/stars/dipenmrana99/ParkinsonDiseaseDetection?style=social)
+
 
 <p align="center">
   <img src="assets/overview.gif" width="600"/>
