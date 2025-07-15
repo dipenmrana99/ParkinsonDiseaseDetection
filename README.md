@@ -33,24 +33,24 @@ python app_knn.py
 Add a table summarizing model performance:
 | Model                | Accuracy | F1 Score | Notes           |
 |----------------------|----------|----------|-----------------|
-| Random Forest        | 99.6%    | 0.96     | Best overall    |
-| SVM                  | 98.0%    | 0.94     | Lightweight     |
-| KNN                  | 96.5%    | 0.92     | Good baseline   |
+| Random Forest        | 90.6%    | 0.96     | Best overall    |
+| SVM                  | 81.0%    | 0.94     | Lightweight     |
+| KNN                  | 87.5%    | 0.92     | Good baseline   |
 
-Explain why RF may overfit vs simpler models.
 
 ---
 
 ### 6. **Dataset Info with Links**
 ```md
 ## 📂 Dataset
-- Source: [UCI Machine Learning Repository – Parkinson’s dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/parkinsons.data)
+- Source: [Kaggle Parkinson Disease Detection by Debasis Samal](https://www.kaggle.com/datasets/debasisdotcom/parkinson-disease-detection?resource=download)
+- Source2: [UCI Machine Learning Repository – Parkinson’s dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/parkinsons.data)
 - Description: 23 voice measurements from 197 instances
 ```
 
 #### ScreenShots:
 ---
-User Dashboard
+User Dashboard - Teststing parameters
 ![user_dashboard](https://github.com/user-attachments/assets/ac3bc1d2-1dfb-43cb-86c7-1eec50c8cedd)
 
 Admin Dashboard
