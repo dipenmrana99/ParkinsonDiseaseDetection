@@ -12,7 +12,7 @@
 ParkinsonDiseaseDetection is a Python-based ML project for detecting Parkinson’s Disease using audio/motion datasets.
 
 **Highlights:**
-- ✅ Multiple classification models: Random Forest, SVM, KNN, XGBoost...
+- ✅ Multiple classification models: Random Forest, SVM, KNN....
 - 🎯 Uses UCI Parkinson’s dataset
 - 📈 Includes EDA, preprocessing, balancing, model comparison
 - 🌐 Optional: Flask web app for live detection (if applicable)
